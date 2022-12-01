@@ -1,0 +1,61 @@
+--- KEY SETUP---
+In order to generate the public and private key pairs held by Alice 
+and the H(PK) held by Bob, please run the key_setup.py file first.
+
+Command: python key_setup.py
+
+The program generates the public key file public.pem 
+
+and the private key private.pem in Alic folder 
+
+and the fingerprint file finger_print.txt, 
+
+which is the H(PK) value in Bob folder
+
+---Worning---
+!!!Note: The default format for entering a username 
+          and password is strictly 
+          Bob, 12345bob
+
+Any other input and incorrect formatting 
+will cause the program to crash!!!
+
+And as seen above PW is 12345bob
+
+
+At the same time, 
+please do not randomly Alice and Bob folder any files, 
+and Alice folder pswd.txt file inside is already saved H (PW) value, 
+please do not delete this file or change its path.
+
+---Host---
+
+To run the host program, 
+
+please use the following command line directly
+
+Command: python Host.py
+
+The host will keep waiting for the client to access after running.
+Please run the client directly instead of doing any unnecessary input.
+
+---Client---
+To run the host program, 
+
+please use the following command line directly
+
+Command: python Client.py
+
+When the host and client programs are successfully run in sequence, 
+the client will first ask for a username and password, be sure to enter Bob, 12345bob
+
+After entering the correct username and password, 
+the host and client will complete the authentication and key establishment protocol in the background,
+and a "Connection OK" message will pop up on the client.
+
+
+
+After confirming that the client pops up the message of Connection Okay, 
+the host and client can send the message encrypted by RC4 stream cipher to each other at will, 
+and the other side will display the decrypted plaintext directly after the successful authentication.
+
